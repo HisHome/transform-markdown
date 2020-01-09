@@ -1,9 +1,5 @@
 # transform-markdown
 
-
-# 安装
-如果仅使用markdown的解析功能，只需下载`/lib/transform-markdown.min.js`，否则应该下载dist中的全部文件。
-
 # 使用
 transform-markdown基于原生js开发，无需任何依赖，在页面中引入：
 ```html
