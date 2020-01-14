@@ -1,4 +1,4 @@
-.a(@f_color: #0600ff, @hover_color: #726fff) {
+.a(@f_color: #e09c1c, @hover_color: #9e6700) {
   color: @f_color;
   text-decoration: none;
   &:hover {
@@ -37,10 +37,17 @@
     }
   }
   ul, ol {
-    margin: 10px 20px;
+    padding: 0;
+    margin: 0 0 20px 40px;
     li {
       padding: 2px 0;
     }
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
   }
   pre {
     margin: 12px 0;
@@ -83,6 +90,7 @@
   a {
     .a();
   }
+  
   strong {
     font-weight: bold;
     color: #333;
