@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+  <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+  <!-- <link href="https://blog.tianzhen.tech/easy-markdown/lib/editor.css" rel="stylesheet"> -->
+  <link href="./lib/transform-markdown.min.css" rel="stylesheet">
+</head>
+<body>
+  <div>222</div>
+  <div id="content"></div>
+  <textarea id="mark" style="height: 100px;"></textarea>
+  <!-- <div id="preview"><blockquote>\n<p>qrqwerqwe</p>\n</blockquote>\n<pre><code class="js"> var a = 123\n</code></pre>\n<h1>2323</h1>\n</div> -->
+  <div id="preview"></div>
+  <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+
+  <script src="./lib/transform-markdown.js"></script>
+  
+  <script>
+    
+    // hljs.initHighlightingOnLoad();
+    var markdown = new Reader();
+    // markdown.renderHtml("```js \n var a=123 \n``` ");
+    // markdown.showHtml("preview");
+    document.getElementById("mark").addEventListener("keyup", function () {
+        markdown.renderHtml(document.getElementById('mark').value);
+        markdown.showHtml("preview");
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+    
+  </script>
+</body>
+</html>
